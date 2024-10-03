@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+  <Dialog id="dialogRegister" title="Realizar Cadastro" type="Message" draggable="true" titleAlignment="Center">
+    <content>
+        
+        <Button text="Voltar" type="Back" press="onVoltar2" width="100px"/>
+
+        <VBox justifyContent="Center" alignContent="Center" alignItems="Center">
+          <Image src="https://site.usinasantaadelia.com.br/wp-content/uploads/2018/05/img_logo.png" width="120px"/>
+        </VBox>
+
+        <VBox>
+            <HBox>
+                <f:SimpleForm id="form2">
+                        <Label text="Nome" design="Bold" required="true" class="marginText"/>
+                        <Input id="name" placeholder="Nome" required="true" type="Text"/>
+
+                        <Label text="Sobrenome" design="Bold" class="marginText" />
+                        <Input id="surname" placeholder="Sobrenome" required="true" type="Text"/>
+
+                        <Label text="Username" design="Bold" class="marginText" />
+                        <Input id="username" placeholder="Usuário" required="true" type="Text"/>
+
+                        <Label text="E-mail" design="Bold" class="marginText" />
+                        <Input id="email" placeholder="E-mail" required="true" type="Email"/>
+
+                        <Label text="Senha" design="Bold" class="marginText" />
+                        <Input id="senha" placeholder="Senha" required="true" type="Password" showValueHelp="true" valueHelpIconSrc="sap-icon://show" valueHelpRequest="onSenha1"/>
+
+                        <Label text="Confirmar Senha" design="Bold" class="marginText" />
+                        <Input id="confirmsenha" placeholder="Confirmar Senha" required="true" type="Password" showValueHelp="true" valueHelpIconSrc="sap-icon://show" valueHelpRequest="onSenha2"/>
+
+                        <VBox justifyContent="Center" alignContent="Center" alignItems="Center" >
+                           <Button text="Criar Conta" press="onCreateUser" type="Success" tooltip="Clique para criar a conta" width="200px"/>
+                        </VBox>
+                        
+                    </f:SimpleForm>
+            </HBox>
+            
+        </VBox>
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

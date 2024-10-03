@@ -1,0 +1,29 @@
+<mvc:View xmlns:vbm="sap.ui.vbm" xmlns:semantic="sap.m.semantic" controllerName="sap.fiori.simpleform1.controller.PaginaInicial"
+    xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    height="100%">
+    <Page title="USÍNA SANTA ADÉLIA" titleAlignment="Center" class="boldText">
+        <Toolbar>
+            <Image src="https://site.usinasantaadelia.com.br/wp-content/uploads/2018/05/img_logo.png" width="70px"/>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button icon="sap-icon://action-settings" tooltip="Configurações" press="onConfig"></Button>
+        </Toolbar>
+            <content>
+                    <SplitContainer>
+                        <masterPages>
+                            <Page title="Navegar" titleAlignment="Center">
+                                <List id="ListItens" mode="SingleSelectMaster" selectionChange="onListSelect" items="{/itens}">
+                                    <StandardListItem title="{title}" class="boldText"/>
+                                </List>
+                            </Page>
+                        </masterPages>
+                        <detailPages>
+                            <Page id="DetailPage" visible="false" title="Detalhes">
+                                <!-- O conteúdo será atualizado dinamicamente -->
+                            </Page>
+                        </detailPages>
+                    </SplitContainer>
+            </content>
+    </Page>
+</mvc:View>

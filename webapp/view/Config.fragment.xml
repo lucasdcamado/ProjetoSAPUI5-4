@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout.form">
+  <Dialog id="dialogConfig" title="Configurações" type="Message" draggable="true" titleAlignment="Center">
+    <content>
+
+        <HBox justifyContent="Center" alignItems="Center">
+          <core:Icon src="sap-icon://light-mode" class="customIconConfig"></core:Icon>
+          <Text text="Modo Escuro " class="boldText"></Text>
+          <Switch id="switchButton" change="SwitchMode" customTextOff="" customTextOn=""/>
+        </HBox>
+
+        <HBox justifyContent="Center" alignItems="Center">
+            <Button text="Voltar" type="Negative" press="onVoltar" icon="sap-icon://undo"/>
+        </HBox>
+
+    </content>
+  </Dialog>
+</core:FragmentDefinition>

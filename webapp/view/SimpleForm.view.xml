@@ -1,0 +1,38 @@
+<mvc:View controllerName="sap.fiori.simpleform1.controller.SimpleForm"
+    xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    height="100%">
+    <Page class="customBackground">
+        <content>
+        <Toolbar>
+            <ToolbarSpacer ></ToolbarSpacer>
+            <Button icon="sap-icon://action-settings" tooltip="Configurações" press="onConfig"></Button>
+        </Toolbar>
+            <!-- VBox principal para centralizar a tela -->
+            <VBox justifyContent="Center" alignItems="Center" height="70%">
+                <VBox justifyContent="Center" alignItems="Center" width="auto">
+                    <Image src="https://site.usinasantaadelia.com.br/wp-content/uploads/2018/05/img_logo.png" width="250px"/>
+                    <f:SimpleForm id="form" layout="ColumnLayout" backgroundDesign="Transparent">
+                        <Label text="Usuário" design="Bold" required="true" class="marginText"/>
+                        <Input id="inputUser" placeholder="Usuário" required="true" width="300px" type="Text"/>
+
+                        <Label text="Senha" design="Bold" class="marginText"/>
+                        <Input id="inputSenha" placeholder="Senha" required="true" width="300px" type="Password" showValueHelp="true" valueHelpIconSrc="sap-icon://show" valueHelpRequest="onSenha"/>
+                    </f:SimpleForm>
+
+                    <CheckBox text="Lembrar minha senha" selected="true"/>
+
+                    <HBox justifyContent="Center" width="100%">
+                        <Button icon="sap-icon://log" text="Conectar" press="onConectar" width="150px" type="Success" tooltip="Clique para conectar"/>
+                    </HBox>
+
+                    <HBox justifyContent="Center" alignItems="Center" alignContent="Center">
+                    <Label text="Novo Associado?" design="Bold" class="marginText"/>
+                    <Button text="Registrar-se" type="Transparent" press="onRegister"/>
+                    </HBox>
+                </VBox>
+            </VBox> 						
+        </content>
+    </Page>
+</mvc:View>
